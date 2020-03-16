@@ -6,7 +6,9 @@ gtfs:
       - note: $doo $acc=3 $dec=3
         consist: YoRyan_SEPA_3emu
 
-        # Center City-bound
+        ##
+        ## Center City-bound
+        ##
       - selection:
             shape_id: '^(201406|201007)$'
         path: YoRyan_Nwrk-UnivCity
@@ -17,7 +19,9 @@ gtfs:
             shape_id: '^(205406|205007)$'
         path: YoRyan_MarcHk-UnivCity
 
-        # Delaware-bound
+        ##
+        ## Delaware-bound
+        ##
       - selection:
             trip_headsign: '^Marcus Hook$'
         path: YoRyan_UnivCity-MarcHk
@@ -30,6 +34,17 @@ gtfs:
       - selection:
             trip_headsign: '^Newark$'
         path: YoRyan_UnivCity-Nwrk
+
+        # Some southbound trains deadlock around the Highland Ave area, so skip
+        # these stops.
+      - selection:
+            trip_id: '^(WIL_4211_V55_M|WIL_237_V5_M|WIL_5249_V5_M|WIL_5253_V5_M|WIL_277_V5_M)$'
+        station_map:
+            90206: # Highland Ave
+      - selection:
+            trip_id: '^WIL_5249_V5_M$'
+        station_map:
+            90205: # Marcus Hook
 
     station_map:
         90007: # Temple University
