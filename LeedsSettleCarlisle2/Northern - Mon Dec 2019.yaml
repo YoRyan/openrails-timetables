@@ -34,6 +34,7 @@ gtfs:
       - selection:
             route_id: '^(22448|22326)$'
         path: YoRyan_LngPres-Lds
+        start_time: -4:00
 
         # Skipton to Lancaster
       - selection:
@@ -42,6 +43,7 @@ gtfs:
       - selection:
             route_id: '^22527$'
         path: YoRyan_LngPres-Skp
+        start_time: -4:00
 
     station_map:
         SHY: # Platforms are not modelled.
