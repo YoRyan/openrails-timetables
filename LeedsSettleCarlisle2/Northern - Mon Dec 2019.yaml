@@ -1,0 +1,53 @@
+route: LeedsSettleCarlisle2
+date: 2019-12-02
+speed_unit: mph
+gtfs:
+  - url: https://transitland-gtfs.s3.amazonaws.com/datastore-uploads/feed_version/d9fdfe685f3f476dd45d121098f0d921b26677bc.zip
+    groups:
+      - note: $dec=3 $doo
+        speed: $max=60
+        consist: YoRyan_Northern_3dmu
+
+        # Leeds to Carlisle
+      - selection:
+            route_id: '^21205$'
+        path: YoRyan_Lds-Car
+        start_time: -18:00 # start in Leeds
+      - selection:
+            route_id: '^21049$'
+        path: YoRyan_Car-Lds
+
+        # Leeds to Ribblehead
+      - selection:
+            route_id: '^22375$'
+        path: YoRyan_Lds-Rib
+        start_time: -18:00 # start in Leeds
+      - selection:
+            route_id: '^22334$'
+        path: YoRyan_Rib-Lds
+
+        # Leeds to Lancaster/Morecambe
+      - selection:
+            route_id: '^(22337|22347)$'
+        path: YoRyan_Lds-LngPres
+        start_time: -18:00 # start in Leeds
+      - selection:
+            route_id: '^(22448|22326)$'
+        path: YoRyan_LngPres-Lds
+
+        # Skipton to Lancaster
+      - selection:
+            route_id: '^22377$'
+        path: YoRyan_Skp-LngPres
+      - selection:
+            route_id: '^22527$'
+        path: YoRyan_LngPres-Skp
+
+    station_map:
+        SHY: # Platforms are not modelled.
+        #LDS: # The route is also missing platform markers for Leeds.
+
+station_commands:
+    "": $stoptime=30
+    Skipton: $stoptime=60
+    Carlisle: $stoptime=120
