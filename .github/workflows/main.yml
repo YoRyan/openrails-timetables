@@ -63,4 +63,29 @@ jobs:
         for tt in "${timetables[@]}"; do
                 build "$tt"
         done
-        exit 0
+
+    - name: Package timetables
+      run: |
+        set -e
+        function package()
+        {
+                ttdir="$1"
+                zipfile=$(basename "$ttdir").zip
+                rm -f "$zipfile"
+                zip -r0 "$zipfile" "$ttdir"/*.yaml "$ttdir"/CONSISTS/ "$ttdir"/PATHS/
+        }
+        cd "$GITHUB_WORKSPACE"
+        timetables=(*/)
+        for tt in "${timetables[@]}"; do
+                package "$tt"
+        done
+        outdir=.artifacts
+        rm -rf "$outdir"
+        mkdir -p "$outdir"
+        mv *.zip "$outdir"
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        name: Timetables
+        path: $GITHUB_WORKSPACE/.artifacts
