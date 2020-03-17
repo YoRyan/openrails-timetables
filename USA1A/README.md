@@ -1,10 +1,12 @@
 # Northeast Coridor v4
 
-Timetables for all passenger service between Washington, Baltimore, and Philadelphia as of August 2019, the latest date for which Amtrak GTFS data is available:
+Bring the NEC to life with a full population of regional and commuter trains. These timetables include all passenger service between Washington, Baltimore, and Philadelphia as of August 2019, the latest date for which Amtrak GTFS data is available:
 
 * Amtrak daytime (Acela/Regional/Palmetto/Carolinian/Vermonter)
 * MARC commuter (Penn Line/Camden Line)
 * SEPTA commuter (Wilmington-Newark Line)
+
+Based on v4 of Vince Cockeram's Northeast Corridor upgrade.
 
 #### Errata
 
