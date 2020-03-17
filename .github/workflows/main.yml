@@ -81,19 +81,16 @@ jobs:
         function package()
         {
                 ttdir="$1"
-                zipfile=$(basename "$ttdir").zip
-                rm -f "$zipfile"
-                zip -r0 "$zipfile" "$ttdir"/*.yaml "$ttdir"/CONSISTS/ "$ttdir"/PATHS/
+                outdir="$2"/$(basename "$ttdir")
+                mkdir -p "$outdir"
+                cp -r "$ttdir"/*.yaml "$ttdir"/CONSISTS/ "$ttdir"/PATHS/ "$outdir"
         }
         cd "$GITHUB_WORKSPACE"
+        artifacts=.artifacts
         timetables=(*/)
         for tt in "${timetables[@]}"; do
-                package "$tt"
+                package "$tt" "$artifacts"
         done
-        outdir=.artifacts
-        rm -rf "$outdir"
-        mkdir -p "$outdir"
-        mv *.zip "$outdir"
 
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
