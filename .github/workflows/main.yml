@@ -30,7 +30,7 @@ jobs:
     - name: Install autotable
       uses: BSFishy/pip-action@v1
       with:
-        packages: git://github.com/YoRyan/autotable@v1.0#egg=autotable
+        packages: git+https://github.com/YoRyan/autotable@v1.0#egg=autotable
 
     - name: Test autotable
       run: autotable -h
