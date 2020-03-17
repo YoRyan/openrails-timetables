@@ -1,2 +1,6 @@
 *.timetable_or
 *.timetable-or
+
+# GitHub workflow
+.build
+.artifacts
