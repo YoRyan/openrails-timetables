@@ -1,0 +1,8 @@
+# Leeds, Settle & Carlisle v2
+
+Run contemporary passenger services on Renzo Grassi's [Leeds, Settle & Carlisle route](http://www.ildeposito.net/Files/Scenari/LeSeCa2.htm), an extended and upgraded version of the Settle & Carlisle route that came with MSTS. This timetable includes all of Northern's Route 7 services between Leeds and Carlisle as of December 2019.
+
+#### Errata
+
+* The route lacks proper platform markers at the Leeds terminal, and it also omits the modern east-west platforms at Shipley. All northbound trains spawn at Leeds and have 18 minutes to reach Bingley, the first modelled stop.
+* The speed limit has been reduced to 60mph, which is prototypical for modern operations.
