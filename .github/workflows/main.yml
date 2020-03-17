@@ -44,30 +44,30 @@ jobs:
                 recipes=("$ttdir"/*.yaml)
                 mock "$ttdir"
                 for r in "${recipes[@]}"; do
-                        autotable "$ttdir/.build" "$r"
+                        autotable "$ttdir"/.build "$r"
                 done
         }
         function mock()
         {
                 ttdir="$1"
-                builddir="$ttdir/.build"
-                routedir="$builddir/ROUTES/"$(basename "$ttdir")
+                builddir="$ttdir"/.build
+                routedir="$builddir"/ROUTES/$(basename "$ttdir")
 
                 rm -rf "$builddir"
-                mkdir -p "$builddir/ROUTES"
-                cp -r "$ttdir/.route" "$routedir"
+                mkdir -p "$builddir"/ROUTES
+                cp -r "$ttdir"/.route "$routedir"
 
-                mkdir -p "$builddir/TRAINS/CONSISTS"
-                if [[ -d "$ttdir/CONSISTS" ]]; then
-                        cp "$ttdir"/CONSISTS/* "$builddir/TRAINS/CONSISTS"
+                mkdir -p "$builddir"/TRAINS/CONSISTS
+                if [[ -d "$ttdir"/CONSISTS ]]; then
+                        cp "$ttdir"/CONSISTS/* "$builddir"/TRAINS/CONSISTS
                 fi
-                if [[ -d "$ttdir/.consists" ]]; then
-                        cp "$ttdir"/.consists/* "$builddir/TRAINS/CONSISTS"
+                if [[ -d "$ttdir"/.consists ]]; then
+                        cp "$ttdir"/.consists/* "$builddir"/TRAINS/CONSISTS
                 fi
 
-                mkdir -p "$routedir/PATHS"
-                if [[ -d "$ttdir/PATHS" ]]; then
-                        cp "$ttdir"/PATHS/* "$routedir/PATHS"
+                mkdir -p "$routedir"/PATHS
+                if [[ -d "$ttdir"/PATHS ]]; then
+                        cp "$ttdir"/PATHS/* "$routedir"/PATHS
                 fi
         }
         timetables=("$GITHUB_WORKSPACE"/*/)
@@ -78,12 +78,20 @@ jobs:
     - name: Package timetables
       run: |
         set -e
+        shopt -s nullglob
         function package()
         {
                 ttdir="$1"
                 outdir="$2"/$(basename "$ttdir")
                 mkdir -p "$outdir"
-                cp -r "$ttdir"/*.yaml "$ttdir"/CONSISTS/ "$ttdir"/PATHS/ "$outdir"
+                cp "$ttdir"/*.timetable-or "$ttdir"/*.timetablelist-or \
+                        "$ttdir"/README* "$outdir"
+                if [[ -d "$ttdir"/CONSISTS ]]; then
+                        cp -r "$ttdir"/CONSISTS/ "$outdir"
+                fi
+                if [[ -d "$ttdir"/PATHS ]]; then
+                        cp -r "$ttdir"/PATHS/ "$outdir"
+                fi
         }
         cd "$GITHUB_WORKSPACE"
         artifacts=.artifacts
