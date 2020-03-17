@@ -52,12 +52,23 @@ jobs:
                 ttdir="$1"
                 builddir="$ttdir/.build"
                 routedir="$builddir/ROUTES/"$(basename "$ttdir")
+
                 rm -rf "$builddir"
                 mkdir -p "$builddir/ROUTES"
                 cp -r "$ttdir/.route" "$routedir"
-                mkdir -p "$builddir/TRAINS"
-                cp -r "$ttdir/CONSISTS" "$builddir/TRAINS/CONSISTS"
-                cp -r "$ttdir/PATHS" "$routedir/PATHS"
+
+                mkdir -p "$builddir/TRAINS/CONSISTS"
+                if [[ -d "$ttdir/CONSISTS" ]]; then
+                        cp "$ttdir"/CONSISTS/* "$builddir/TRAINS/CONSISTS"
+                fi
+                if [[ -d "$ttdir/.consists" ]]; then
+                        cp "$ttdir"/.consists/* "$builddir/TRAINS/CONSISTS"
+                fi
+
+                mkdir -p "$routedir/PATHS"
+                if [[ -d "$ttdir/PATHS" ]]; then
+                        cp "$ttdir"/PATHS/* "$routedir/PATHS"
+                fi
         }
         timetables=("$GITHUB_WORKSPACE"/*/)
         for tt in "${timetables[@]}"; do
