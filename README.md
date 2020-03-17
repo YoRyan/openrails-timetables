@@ -1,3 +1,5 @@
+![Build timetables](https://github.com/YoRyan/openrails-timetables/workflows/Build%20timetables/badge.svg)
+
 This repository contains passenger operations timetables for [Open Rails](http://openrails.org/) routes I am interested in. They are based on real-life schedules and are generated automatically by my [autotable](https://github.com/YoRyan/autotable) program.
 
 To install a timetable:
