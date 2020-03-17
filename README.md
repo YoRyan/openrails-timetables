@@ -3,7 +3,7 @@ This repository contains passenger operations timetables for [Open Rails](http:/
 To install a timetable:
 
 1. Create the `ROUTES\<Route>\ACTIVITIES\OpenRails` directory if it doesn't already exist.
-2. Copy the `.timetable-or` and `.timetable-list` files into the `OpenRails` directory.
+2. Copy the `.timetable-or` and `.timetablelist-or` files into the `OpenRails` directory.
 3. Copy the `.pat` files in `PATHS` to the `ROUTES\<Route>\PATHS` directory.
 4. Copy the `.con` files in `CONSISTS` to the `TRAINSET\CONSISTS` directory.
 
