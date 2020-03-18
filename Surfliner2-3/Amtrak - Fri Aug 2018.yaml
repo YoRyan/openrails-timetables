@@ -59,7 +59,7 @@ gtfs:
         path: YoRyan_San-Slo
         consist: YoRyan_AMTK_Surfliner_6car $reverse
 
-        # LA - San Luis Obispo
+        # LA - Goleta
       - selection:
             trip_short_name: '^759$'
         path: YoRyan_LA-Gol
