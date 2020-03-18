@@ -19,5 +19,5 @@ To install a timetable:
 4. Copy the `.con` files in `CONSISTS` into the `TRAINSET\CONSISTS` directory.
 
 For convenience, all consists use default rolling stock. You can use any consist
-editor, like the one that comes with [TRES5](http://koniec.org/tsre5/), to swap
+editor, like the one that comes with [TSRE5](http://koniec.org/tsre5/), to swap
 in your preferred equipment.
