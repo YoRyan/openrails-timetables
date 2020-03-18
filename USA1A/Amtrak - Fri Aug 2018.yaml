@@ -1,7 +1,7 @@
 route: USA1A
-date: 2019-08-09
+date: 2018-08-10
 gtfs:
-  - url: https://transitland-gtfs.s3.amazonaws.com/datastore-uploads/feed_version/d2483076c78b6d8b12cf67a1fae7c4f5fa5aaad4.zip
+  - url: https://transitfeeds.com/p/amtrak/1136/20190523/download
     groups:
       - note: $dec=2
 
@@ -86,4 +86,5 @@ gtfs:
 station_commands:
     "": $stoptime=60 # override the default 3-minute waiting time
     Union Station: $stoptime=120
+    Baltimore Penn Station: $stoptime=120
     Philadelphia: $stoptime=120
