@@ -1,16 +1,17 @@
 route: USA1A
-date: 2019-08-09
+date: 2018-08-10
 gtfs:
-  - url: https://transitfeeds.com/p/septa/262/20190810/download
+  # In August 2018, Wilmington-Newark trains skipped University City, but we'll
+  # just ignore that change.
+  #- url: https://transitfeeds.com/p/septa/262/20180802/download
+  - url: https://transitfeeds.com/p/septa/262/20180524/download
     groups:
       - note: $doo $acc=3 $dec=3
         consist: YoRyan_SEPA_3emu
 
-        ##
-        ## Center City-bound
-        ##
+        # Center City-bound
       - selection:
-            shape_id: '^(201406|201007)$'
+            shape_id: '^(201005|201406|201007)$'
         path: YoRyan_Nwrk-UnivCity
       - selection:
             shape_id: '^(203406|203007)$'
@@ -19,26 +20,24 @@ gtfs:
             shape_id: '^(205406|205007)$'
         path: YoRyan_MarcHk-UnivCity
 
-        ##
-        ## Delaware-bound
-        ##
+        # Delaware-bound
       - selection:
-            trip_headsign: '^Marcus Hook$'
+            shape_id: '^007205$'
         path: YoRyan_UnivCity-MarcHk
       - selection:
-            trip_headsign: '^Claymont$'
+            shape_id: '^007204$'
         path: YoRyan_UnivCity-Clay
       - selection:
-            trip_headsign: '^Wilming?ton$'
+            shape_id: '^(005203|007203)$'
         path: YoRyan_UnivCity-Wilm
       - selection:
-            trip_headsign: '^Newark$'
+            shape_id: '^(005201|007201)$'
         path: YoRyan_UnivCity-Nwrk
 
         # Some southbound trains deadlock around the Highland Ave area, so skip
         # these stops.
       - selection:
-            trip_id: '^(WIL_4211_V55_M|WIL_237_V5_M|WIL_5249_V5_M|WIL_5253_V5_M|WIL_277_V5_M)$'
+            trip_id: '^(WIL_4211_V55_M|WIL_9227_V5_M|WIL_9231_V55_M|WIL_237_V5_M|WIL_5249_V5_M|WIL_5253_V5_M|WIL_9261_V55_M|WIL_277_V5_M)$'
         station_map:
             90206: # Highland Ave
       - selection:
@@ -48,7 +47,6 @@ gtfs:
 
     station_map:
         90007: # Temple University
-        90406: University City
 
 station_commands:
     "": $stoptime=30 # override the default 3-minute waiting time
