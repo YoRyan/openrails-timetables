@@ -1,7 +1,7 @@
 route: Surfliner2-3
-date: 2019-08-09
+date: 2018-08-10
 gtfs:
-  - url: https://transitland-gtfs.s3.amazonaws.com/datastore-uploads/feed_version/d2483076c78b6d8b12cf67a1fae7c4f5fa5aaad4.zip
+  - url: https://transitfeeds.com/p/amtrak/1136/20190523/download
     groups:
 
         ##
@@ -62,7 +62,7 @@ gtfs:
         # LA - San Luis Obispo
       - selection:
             trip_short_name: '^759$'
-        path: YoRyan_LA-Slo
+        path: YoRyan_LA-Gol
         consist: YoRyan_AMTK_Surfliner_6car
 
         ##
