@@ -1,5 +1,5 @@
 route: MariasPass5
-date: 2019-04-05
+date: 2018-10-12
 gtfs:
   - url: https://transitfeeds.com/p/amtrak/1136/20190523/download
     groups:
