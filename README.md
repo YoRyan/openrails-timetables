@@ -6,8 +6,8 @@ real-life schedules and are generated automatically by my
 [autotable](https://github.com/YoRyan/autotable) program.
 
 Ready-to-run timetables are available on the
-[actions page](https://github.com/YoRyan/openrails-timetables/actions?query=is%3Asuccess+workflow%3A%22Build+timetables%22),
-which you will need to sign into GitHub (any account works) to access.
+[Actions page](https://github.com/YoRyan/openrails-timetables/actions?query=is%3Asuccess+workflow%3A%22Build+timetables%22),
+which you will need to sign in to GitHub (any account works) to access.
 Pick the latest commit and download the "All timetables" artifact.
 
 To install a timetable:
