@@ -11,16 +11,16 @@ gtfs:
             direction_id: '^0$'
         consist: YoRyan_NMRX_4car $reverse
       - selection:
-            trip_id: '.*nb_T(04|09|10)$'
+            trip_id: 'nb_T(04|09|10)$'
         path: YoRyan_Beln-Albq
       - selection:
-            trip_id: '.*nb_T(01|02|05|07)$'
+            trip_id: 'nb_T(01|02|05|07)$'
         path: YoRyan_Albq-SFe
       - selection:
-            trip_id: '.*nb_T(03|06|08)$'
+            trip_id: 'nb_T(03|06|08)$'
         path: YoRyan_Beln-SFe
       - selection:
-            trip_id: 'RR_express_nb_102_EXPRESS_T01$'
+            trip_id: '^RR_express_nb_102_EXPRESS_T01$'
         path: YoRyan_Beln-SFe_Exp
 
         # Toward Belen
@@ -29,16 +29,16 @@ gtfs:
             direction_id: '^1$'
         consist: YoRyan_NMRX_4car
       - selection:
-            trip_id: '.*sb_T(04|10|11)$'
+            trip_id: 'sb_T(04|10|11)$'
         path: YoRyan_SFe-Albq
       - selection:
-            trip_id: '.*sb_T(01|02|06)$'
+            trip_id: 'sb_T(01|02|06)$'
         path: YoRyan_Albq-Beln
       - selection:
-            trip_id: '.*sb_T(03|05|07|09)$'
+            trip_id: 'sb_T(03|05|07|09)$'
         path: YoRyan_SFe-Beln
       - selection:
-            trip_id: 'RR_express_sb_101_EXPRESS_T01$'
+            trip_id: '^RR_express_sb_101_EXPRESS_T01$'
         path: YoRyan_SFe-Albq_Exp
 
     station_map:
