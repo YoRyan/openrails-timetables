@@ -1,0 +1,47 @@
+route: CajonPass4
+date: 2018-08-10
+gtfs:
+  - url: https://transitfeeds.com/p/metrolink/332/20180610/download
+    groups:
+      - note: $dec=2
+
+        ##
+        ## Orange County Line
+        ##
+
+        # Toward Union Station
+      - selection:
+            direction_id: '^1$'
+        consist: YoRyan_SCAX_5car $reverse
+        station_map:
+            110: Norwalk/Santa Fe Springs Metrolink 1
+            84: Buena Park Metrolink 1
+            97: Fullerton Metrolink 1
+      - selection:
+            trip_short_name: '^(601|609|681|683|687|689)$'
+        path: YoRyan_Ful-LA_SCAX
+      - selection:
+            trip_short_name: '^(603|605|607|685)$'
+        path: YoRyan_Ful-Com-LA_SCAX
+
+        # Toward Oceanside
+      - selection:
+            direction_id: '^0$'
+        consist: YoRyan_SCAX_5car
+        station_map:
+            110: Norwalk/Santa Fe Springs Metrolink 2
+            84: Buena Park Metrolink 2
+            97: Fullerton Metrolink 2
+      - selection:
+            trip_short_name: '^(600|608|682|684|688)$'
+        path: YoRyan_LA-Ful_SCAX
+      - selection:
+            trip_short_name: '^(602|604|606|686)$'
+        path: YoRyan_LA-Com-Ful_SCAX
+
+    station_map:
+        131: LA Union Station
+
+station_commands:
+    "": $stoptime=30
+    LA Union Station: $stoptime=120

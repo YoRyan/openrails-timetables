@@ -1,0 +1,88 @@
+route: CajonPass4
+date: 2018-08-10
+gtfs:
+  - url: https://transitfeeds.com/p/metrolink/332/20180610/download
+    groups:
+      - note: $dec=2
+
+        ##
+        ## 91/Perris Valley Line
+        ##
+
+        # Toward Union Station
+      - selection:
+            trip_short_name: '^(701|703|705|707)$'
+        path: YoRyan_Riv-LA
+        consist: YoRyan_SCAX_5car $reverse
+        station_map:
+            110: Norwalk/Santa Fe Springs Metrolink 1
+            84: Buena Park Metrolink 1
+            97: Fullerton Metrolink 1
+            135: West Corona Metrolink 1
+            108: North Main Corona Metrolink 1
+            121: Riverside-La Sierra Metrolink 1
+            120: Riverside-Downtown Metrolink 1
+
+        # Toward Perris
+      - selection:
+            trip_short_name: '^(700|702|704|706|708)$'
+        path: YoRyan_LA-Riv
+        consist: YoRyan_SCAX_5car
+        station_map:
+            110: Norwalk/Santa Fe Springs Metrolink 2
+            84: Buena Park Metrolink 2
+            97: Fullerton Metrolink 2
+            135: West Corona Metrolink 2
+            108: North Main Corona Metrolink 2
+            121: Riverside-La Sierra Metrolink 2
+            120: Riverside-Downtown Metrolink 2
+
+        ##
+        ## Inland Empire-Orange County Line
+        ##
+
+        # Toward San Bernardino
+      - selection:
+            route_id: '^Inland Emp.-Orange Co. Line$'
+            direction_id: '^1$'
+        consist: YoRyan_SCAX_5car $reverse
+        station_map:
+            135: West Corona Metrolink 2
+            108: North Main Corona Metrolink 2
+            121: Riverside-La Sierra Metrolink 2
+            120: Riverside-Downtown Metrolink 2
+            122: San Bernardino Metrolink 3
+      - selection:
+            trip_short_name: '^(802|808|810|812)$'
+        path: YoRyan_WCor-SanB
+        start_time: -20:00
+      - selection:
+            trip_short_name: '^(800|804|806|814)$'
+        path: YoRyan_WCor-Riv
+        start_time: -20:00
+
+        # Toward Oceanside
+      - selection:
+            route_id: '^Inland Emp.-Orange Co. Line$'
+            direction_id: '^0$'
+        consist: YoRyan_SCAX_5car
+        station_map:
+            135: West Corona Metrolink 1
+            108: North Main Corona Metrolink 1
+            121: Riverside-La Sierra Metrolink 1
+            120: Riverside-Downtown Metrolink 1
+            122: San Bernardino Metrolink 1
+      - selection:
+            trip_short_name: '^(803|805|807|815)$'
+        path: YoRyan_SanB-WCor
+      - selection:
+            trip_short_name: '^(809|811|813|817)$'
+        path: YoRyan_Riv-WCor
+
+    station_map:
+        131: LA Union Station
+        500: # San Bernardino-Downtown
+
+station_commands:
+    "": $stoptime=30
+    LA Union Station: $stoptime=120

@@ -1,0 +1,61 @@
+route: CajonPass4
+date: 2018-08-10
+gtfs:
+  - url: https://transitfeeds.com/p/metrolink/332/20180610/download
+    groups:
+      - note: $dec=2
+
+        ##
+        ## Antelope Valley Line
+        ##
+
+        # Toward Union Station
+      - selection:
+            route_id: '^Antelope Valley Line$'
+            direction_id: '^1$'
+            trip_short_name: '^(?!Bus|282).*$'
+        path: YoRyan_Lanc-Palm
+        start_time: -3:00
+        consist: YoRyan_SCAX_5car $reverse
+        station_map:
+            102: Metrolink Lascaster 1
+
+        # Toward Lancaster
+      - selection:
+            route_id: '^Antelope Valley Line$'
+            direction_id: '^0$'
+            trip_short_name: '^(?!Bus|285).*$'
+        path: YoRyan_Palm-Lanc
+        consist: YoRyan_SCAX_5car
+        station_map:
+            102: Metrolink Lascaster 2
+
+        ##
+        ## San Bernardino Line
+        ##
+
+        # Toward Union Station
+      - selection:
+            route_id: '^San Bernardino Line$'
+            direction_id: '^1$'
+        path: YoRyan_SanB-Font
+        consist: YoRyan_SCAX_5car $reverse
+        station_map:
+            122: San Bernardino Metrolink 2
+
+        # Toward San Bernardino
+      - selection:
+            route_id: '^San Bernardino Line$'
+            direction_id: '^0$'
+        path: YoRyan_Font-SanB
+        start_time: -9:00
+        consist: YoRyan_SCAX_5car
+        station_map:
+            122: San Bernardino Metrolink 3
+
+    station_map:
+        131: # Union Station
+        500: # San Bernardino-Downtown
+
+station_commands:
+    "": $stoptime=30

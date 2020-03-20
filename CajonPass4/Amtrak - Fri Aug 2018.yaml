@@ -1,0 +1,64 @@
+route: CajonPass4
+date: 2018-08-10
+gtfs:
+  - url: https://transitfeeds.com/p/amtrak/1136/20190523/download
+    groups:
+      - selection:
+            direction_id: '^0$'
+        station_map:
+            FUL: Fullerton Amtrak 1
+            RIV: Riverside Amtrak Station 1
+            VRV: Amtrak Victorville Station 1
+      - selection:
+            direction_id: '^1$'
+        station_map:
+            FUL: Fullerton Amtrak 2
+            RIV: Riverside Amtrak Station 2
+            VRV: Amtrak Victorville Station 2
+
+        ##
+        ## Pacific Surfliner
+        ##
+      - selection:
+            route_id: '^78$'
+        note: $dec=2
+
+        # Toward San Diego
+      - selection:
+            route_id: '^78$'
+            direction_id: '^1$'
+        path: YoRyan_LA-Ful_AMTK
+        consist: YoRyan_AMTK_Surfliner_6car
+
+        # Toward Los Angeles
+      - selection:
+            route_id: '^78$'
+            direction_id: '^0$'
+            # Ignore the sole northbound train from LA.
+            trip_short_name: '^(?!759).*$'
+        path: YoRyan_Ful-LA_AMTK
+        consist: YoRyan_AMTK_Surfliner_6car $reverse
+
+        ##
+        ## Southwest Chief
+        ##
+
+        # Toward Los Angeles
+      - selection:
+            route_id: '^51$'
+            direction_id: '^0$'
+        path: YoRyan_Bar-LA
+        consist: YoRyan_AMTK_SwChief_8car
+
+        # Toward Chicago
+      - selection:
+            route_id: '^51$'
+            direction_id: '^1$'
+        path: YoRyan_LA-Bar
+        consist: YoRyan_AMTK_SwChief_8car
+
+    station_map:
+        LAX: LA Union Station
+
+station_commands:
+    "": $stoptime=120
