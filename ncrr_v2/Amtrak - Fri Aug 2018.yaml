@@ -1,0 +1,91 @@
+route: ncrr_v2
+date: 2018-08-10
+gtfs:
+  - url: https://transitfeeds.com/p/amtrak/1136/20190523/download
+    groups:
+      - note: $dec=2
+
+        # Northbound stations
+      - selection:
+            direction_id: '^0$'
+        station_map:
+            CLT: CHARLOTTE - Main 1
+            HPT: HIGH POINT - Main 1
+      - selection:
+            route_id: '^(79|85)$'
+            direction_id: '^0$'
+        station_map:
+            GRO: GREENSBORO - H-Line Main 1
+
+        # Southbound stations
+      - selection:
+            direction_id: '^1$'
+        station_map:
+            CLT: CHARLOTTE - Main 2
+            HPT: HIGH POINT - Main 2
+      - selection:
+            route_id: '^(79|85)$'
+            direction_id: '^1$'
+        station_map:
+            GRO: GREENSBORO - H-Line Main 2
+
+        # Piedmont
+      - selection:
+            route_id: '^79$'
+        consist: YoRyan_RNCX_4car
+      - selection:
+            route_id: '^79$'
+            direction_id: '^0$'
+        path: YoRyan_Char-Ralh
+      - selection:
+            route_id: '^79$'
+            direction_id: '^1$'
+        path: YoRyan_Ralh-Char
+
+        # Carolinian
+      - selection:
+            route_id: '^85$'
+        consist: YoRyan_AMTK_Carolinian_7car
+      - selection:
+            route_id: '^85$'
+            direction_id: '^0$'
+        path: YoRyan_Char-Ralh
+      - selection:
+            route_id: '^85$'
+            direction_id: '^1$'
+        path: YoRyan_Ralh-Char
+
+        # Silver Star
+      - selection:
+            route_id: '^70$'
+        consist: YoRyan_AMTK_SilverStar_7car
+        station_map:
+            CYN: CARY - S-Line
+      - selection:
+            route_id: '^70$'
+            direction_id: '^0$'
+        path: YoRyan_Cary-Ralh
+      - selection:
+            route_id: '^70$'
+            direction_id: '^1$'
+        path: YoRyan_Ralh-Cary
+
+        # Crescent
+      - selection:
+            route_id: '^36923$'
+        consist: YoRyan_AMTK_Crescent_9car
+      - selection:
+            route_id: '^36923$'
+            direction_id: '^0$'
+        path: YoRyan_Char-Grns
+        station_map:
+            GRO: GREENSBORO - Main 1
+      - selection:
+            route_id: '^36923$'
+            direction_id: '^1$'
+        path: YoRyan_Grns-Char
+        station_map:
+            GRO: GREENSBORO - Main 2
+
+station_commands:
+    "": $stoptime=120
