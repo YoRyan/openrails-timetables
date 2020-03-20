@@ -1,0 +1,53 @@
+route: bnsfgp
+date: 2020-03-06
+gtfs:
+  - url: https://web.archive.org/web/20200320184156/http://mrcogshare.org/file-transfer/gtfs-data-winter-2020.zip
+    groups:
+      - note: $dec=2
+
+        # Toward Santa Fe
+      - selection:
+            route_id: '^rr$'
+            direction_id: '^0$'
+        consist: YoRyan_NMRX_4car $reverse
+      - selection:
+            trip_id: '.*nb_T(04|09|10)$'
+        path: YoRyan_Beln-Albq
+      - selection:
+            trip_id: '.*nb_T(01|02|05|07)$'
+        path: YoRyan_Albq-SFe
+      - selection:
+            trip_id: '.*nb_T(03|06|08)$'
+        path: YoRyan_Beln-SFe
+      - selection:
+            trip_id: 'RR_express_nb_102_EXPRESS_T01$'
+        path: YoRyan_Beln-SFe_Exp
+
+        # Toward Belen
+      - selection:
+            route_id: '^rr$'
+            direction_id: '^1$'
+        consist: YoRyan_NMRX_4car
+      - selection:
+            trip_id: '.*sb_T(04|10|11)$'
+        path: YoRyan_SFe-Albq
+      - selection:
+            trip_id: '.*sb_T(01|02|06)$'
+        path: YoRyan_Albq-Beln
+      - selection:
+            trip_id: '.*sb_T(03|05|07|09)$'
+        path: YoRyan_SFe-Beln
+      - selection:
+            trip_id: 'RR_express_sb_101_EXPRESS_T01$'
+        path: YoRyan_SFe-Albq_Exp
+
+    station_map:
+        bernalillo_co: Bernalillo Co / Intl Sunport
+        kewa: Kewi Pueblo
+        
+
+station_commands:
+    "": $stoptime=30
+    Belen: $stoptime=60
+    Albuquerque: $stoptime=60
+    Santa Fe: $stoptime=60

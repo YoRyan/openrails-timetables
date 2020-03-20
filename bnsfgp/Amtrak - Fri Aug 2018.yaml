@@ -1,0 +1,26 @@
+route: bnsfgp
+date: 2018-08-10
+gtfs:
+  - url: https://transitfeeds.com/p/amtrak/1136/20190523/download
+    groups:
+        ##
+        ## Southwest Chief
+        ##
+
+        # Toward Los Angeles
+      - selection:
+            route_id: '^51$'
+            direction_id: '^0$'
+        path: YoRyan_LasV-Albq
+        consist: YoRyan_AMTK_SwChief_8car
+
+        # Toward Chicago
+      - selection:
+            route_id: '^51$'
+            direction_id: '^1$'
+        path: YoRyan_Albq-LasV
+        start_time: -30:00
+        consist: YoRyan_AMTK_SwChief_8car
+
+station_commands:
+    "": $stoptime=120
