@@ -1,7 +1,7 @@
 route: bnsfgp
 date: 2020-03-06
 gtfs:
-  - url: https://web.archive.org/web/20200320184156/http://mrcogshare.org/file-transfer/gtfs-data-winter-2020.zip
+  - url: http://mrcogshare.org/file-transfer/gtfs-data-winter-2020.zip
     groups:
       - note: $dec=2
 
