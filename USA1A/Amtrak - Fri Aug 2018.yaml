@@ -15,6 +15,9 @@ gtfs:
             direction_id: '^1$'
         path: YoRyan_Phil-Wash_Acela
         consist: acela
+      - selection:
+            trip_short_name: '^(2107|2173)$'
+        path: YoRyan_Phil-Wash_Acela_NoOdt
 
         # Northeast Regional
       - selection:
@@ -22,6 +25,9 @@ gtfs:
             direction_id: '^1$'
         path: YoRyan_Phil-Wash_Regional
         consist: YoRyan_NERegional_7car
+      - selection:
+            trip_short_name: '^133$'
+        path: YoRyan_Phil-Wash_Regional_NoOdt
 
         # Vermonter
       - selection:
@@ -54,6 +60,9 @@ gtfs:
             direction_id: '^0$'
         path: YoRyan_Wash-Phil_Acela
         consist: acela
+      - selection:
+            trip_short_name: '^(2150|2164|2168|2172|2122|2124|2126)$'
+        path: YoRyan_Wash-Phil_Acela_NoBWI
 
         # Northeast Regional
       - selection:
@@ -61,6 +70,9 @@ gtfs:
             direction_id: '^0$'
         path: YoRyan_Wash-Phil_Regional
         consist: YoRyan_NERegional_7car
+      - selection:
+            trip_short_name: '^138$'
+        path: YoRyan_Wash-Phil_Regional_NoOdt
 
         # Vermonter
       - selection:
