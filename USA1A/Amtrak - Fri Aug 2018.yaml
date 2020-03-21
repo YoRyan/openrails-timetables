@@ -71,6 +71,9 @@ gtfs:
         path: YoRyan_Wash-Phil_Regional
         consist: YoRyan_NERegional_7car
       - selection:
+            trip_short_name: '^(184|134)$'
+        path: YoRyan_Wash-Nwk-Phil_Regional
+      - selection:
             trip_short_name: '^138$'
         path: YoRyan_Wash-Phil_Regional_NoOdt
 
