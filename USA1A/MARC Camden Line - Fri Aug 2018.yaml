@@ -11,6 +11,9 @@ gtfs:
             direction_id: '^1$'
         path: YoRyan_Wash-Camd
         consist: YoRyan_MARC_5car
+      - selection:
+            trip_short_name: '^Train 848$'
+        path: YoRyan_Wash-Dors
 
         # Washington-bound
       - selection:
@@ -18,6 +21,9 @@ gtfs:
             direction_id: '^0$'
         path: YoRyan_Camd-Wash
         consist: YoRyan_MARC_5car $reverse
+      - selection:
+            trip_short_name: '^Train 855$'
+        path: YoRyan_Dors-Wash
 
     station_map:
         12008: ELKRIDGE # Dorsey SB
