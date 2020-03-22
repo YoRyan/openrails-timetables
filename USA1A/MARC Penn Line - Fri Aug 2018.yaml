@@ -15,7 +15,7 @@ gtfs:
             trip_short_name: '^Train 5\d\d$'
             direction_id: '^1$'
         path: YoRyan_Wash-Perr
-        consist: YoRyan_MARCPenn_8car
+        consist: YoRyan_MARC_8car_elec
       - selection:
             trip_short_name: '^Train 554$'
         path: YoRyan_Balt-Perr
@@ -35,7 +35,7 @@ gtfs:
             trip_short_name: '^Train 5\d\d$'
             direction_id: '^0$'
         path: YoRyan_Perr-Wash
-        consist: YoRyan_MARCPenn_8car $reverse
+        consist: YoRyan_MARC_8car_elec $reverse
       - selection:
             trip_short_name: '^Train 579$'
         path: YoRyan_Perr-Balt
