@@ -1,11 +1,13 @@
 # Northeast Coridor v4
 
-Bring the NEC to life with a full population of regional and commuter trains.
-These timetables include all passenger service between Washington, Baltimore,
-and Philadelphia as of August 2018, the latest date for which Amtrak GTFS data
-is available:
+Bring the NEC to life with a full population of long-distance, regional, and
+commuter trains. These timetables include all passenger service between
+Washington, Baltimore, and Philadelphia as of August 2018, the latest date
+for which Amtrak GTFS data is available:
 
 * Amtrak daytime (Acela/Regional/Palmetto/Carolinian/Vermonter)
+* Amtrak long-distance (Crescent/Silver Meteor/Silver Star) (the Cardinal was
+  truncated to Washington during this time)
 * MARC commuter (Penn Line/Camden Line)
 * SEPTA commuter (Wilmington-Newark Line)
 

@@ -53,6 +53,27 @@ gtfs:
         path: YoRyan_Phil-Wash_LD
         consist: YoRyan_Palmetto_6car
 
+        # Silver Star
+      - selection:
+            route_id: '^70$'
+            direction_id: '^1$'
+        path: YoRyan_Phil-Wash_LD
+        consist: YoRyan_AMTK_SilverStar_7car_elec
+
+        # Crescent
+      - selection:
+            route_id: '^36923$'
+            direction_id: '^1$'
+        path: YoRyan_Phil-Wash_LD_alt
+        consist: YoRyan_AMTK_Crescent_9car_elec
+
+        # Silver Meteor
+      - selection:
+            route_id: '^91$'
+            direction_id: '^1$'
+        path: YoRyan_Phil-Wash_LD_alt
+        consist: YoRyan_AMTK_SilverMeteor_12car_elec
+
         ##
         ## Philadelphia-bound
         ##
@@ -103,6 +124,27 @@ gtfs:
             direction_id: '^0$'
         path: YoRyan_Wash-Phil_LD
         consist: YoRyan_Palmetto_6car
+
+        # Silver Meteor
+      - selection:
+            route_id: '^91$'
+            direction_id: '^0$'
+        path: YoRyan_Wash-Phil_LD
+        consist: YoRyan_AMTK_SilverMeteor_12car_elec
+
+        # Crescent
+      - selection:
+            route_id: '^36923$'
+            direction_id: '^0$'
+        path: YoRyan_Wash-Phil_LD_alt
+        consist: YoRyan_AMTK_Crescent_9car_elec
+
+        # Silver Star
+      - selection:
+            route_id: '^70$'
+            direction_id: '^0$'
+        path: YoRyan_Wash-Phil_LD
+        consist: YoRyan_AMTK_SilverStar_7car_elec
 
 station_commands:
     "": $stoptime=60 # override the default 3-minute waiting time
