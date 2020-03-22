@@ -1,9 +1,11 @@
 route: USA1A
 date: 2018-08-10
+speed_unit: mph
 gtfs:
   - url: https://transitfeeds.com/p/mta-maryland/247/20180713/download
     groups:
       - note: $dec=2
+        speed: $max=79
 
         # Baltimore-bound
       - selection:

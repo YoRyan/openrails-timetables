@@ -1,5 +1,6 @@
 route: USA1A
 date: 2018-08-10
+speed_unit: mph
 gtfs:
   # In August 2018, Wilmington-Newark trains skipped University City, but we'll
   # just ignore that change.
@@ -8,6 +9,7 @@ gtfs:
     groups:
       - note: $doo $acc=3 $dec=3
         consist: YoRyan_SEPA_3emu
+        speed: $max=90
 
         # Center City-bound
       - selection:

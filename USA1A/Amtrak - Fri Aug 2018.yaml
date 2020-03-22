@@ -1,5 +1,6 @@
 route: USA1A
 date: 2018-08-10
+speed_unit: mph
 gtfs:
   - url: https://transitfeeds.com/p/amtrak/1136/20190523/download
     groups:
@@ -23,6 +24,7 @@ gtfs:
       - selection:
             route_id: '^88$'
             direction_id: '^1$'
+        speed: $max=125
         path: YoRyan_Phil-Wash_Regional
         consist: YoRyan_AMTK_NERegional_7car_elec
       - selection:
@@ -36,6 +38,7 @@ gtfs:
       - selection:
             route_id: '^90$'
             direction_id: '^1$'
+        speed: $max=125
         path: YoRyan_Phil-Wash_Regional
         consist: YoRyan_AMTK_Vermonter_6car_elec
 
@@ -43,6 +46,7 @@ gtfs:
       - selection:
             route_id: '^85$'
             direction_id: '^1$'
+        speed: $max=110
         path: YoRyan_Phil-Wash_LD
         consist: YoRyan_AMTK_Carolinian_7car_elec
 
@@ -50,6 +54,7 @@ gtfs:
       - selection:
             route_id: '^69$'
             direction_id: '^1$'
+        speed: $max=110
         path: YoRyan_Phil-Wash_LD
         consist: YoRyan_AMTK_Palmetto_6car_elec
 
@@ -57,6 +62,7 @@ gtfs:
       - selection:
             route_id: '^70$'
             direction_id: '^1$'
+        speed: $max=110
         path: YoRyan_Phil-Wash_LD
         consist: YoRyan_AMTK_SilverStar_7car_elec
 
@@ -64,6 +70,7 @@ gtfs:
       - selection:
             route_id: '^36923$'
             direction_id: '^1$'
+        speed: $max=110
         path: YoRyan_Phil-Wash_LD_alt
         consist: YoRyan_AMTK_Crescent_9car_elec
 
@@ -71,6 +78,7 @@ gtfs:
       - selection:
             route_id: '^91$'
             direction_id: '^1$'
+        speed: $max=110
         path: YoRyan_Phil-Wash_LD_alt
         consist: YoRyan_AMTK_SilverMeteor_12car_elec
 
@@ -92,6 +100,7 @@ gtfs:
       - selection:
             route_id: '^88$'
             direction_id: '^0$'
+        speed: $max=125
         path: YoRyan_Wash-Phil_Regional
         consist: YoRyan_AMTK_NERegional_7car_elec
       - selection:
@@ -108,6 +117,7 @@ gtfs:
       - selection:
             route_id: '^90$'
             direction_id: '^0$'
+        speed: $max=125
         path: YoRyan_Wash-Phil_Regional
         consist: YoRyan_AMTK_Vermonter_6car_elec
 
@@ -115,6 +125,7 @@ gtfs:
       - selection:
             route_id: '^85$'
             direction_id: '^0$'
+        speed: $max=110
         path: YoRyan_Wash-Phil_LD
         consist: YoRyan_AMTK_Carolinian_7car_elec
 
@@ -122,6 +133,7 @@ gtfs:
       - selection:
             route_id: '^69$'
             direction_id: '^0$'
+        speed: $max=110
         path: YoRyan_Wash-Phil_LD
         consist: YoRyan_AMTK_Palmetto_6car_elec
 
@@ -129,6 +141,7 @@ gtfs:
       - selection:
             route_id: '^91$'
             direction_id: '^0$'
+        speed: $max=110
         path: YoRyan_Wash-Phil_LD
         consist: YoRyan_AMTK_SilverMeteor_12car_elec
 
@@ -136,6 +149,7 @@ gtfs:
       - selection:
             route_id: '^36923$'
             direction_id: '^0$'
+        speed: $max=110
         path: YoRyan_Wash-Phil_LD_alt
         consist: YoRyan_AMTK_Crescent_9car_elec
 
@@ -143,6 +157,7 @@ gtfs:
       - selection:
             route_id: '^70$'
             direction_id: '^0$'
+        speed: $max=110
         path: YoRyan_Wash-Phil_LD
         consist: YoRyan_AMTK_SilverStar_7car_elec
 
