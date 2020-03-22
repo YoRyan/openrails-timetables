@@ -28,6 +28,9 @@ gtfs:
       - selection:
             trip_short_name: '^133$'
         path: YoRyan_Phil-Wash_Regional_NoOdt
+      - selection:
+            trip_short_name: '^(65|95|125|171|83|85)$'
+        path: YoRyan_Phil-Wash_LD
 
         # Vermonter
       - selection:
@@ -40,14 +43,14 @@ gtfs:
       - selection:
             route_id: '^85$'
             direction_id: '^1$'
-        path: YoRyan_Phil-Wash_Regional
+        path: YoRyan_Phil-Wash_LD
         consist: YoRyan_Carolinian_7car
 
         # Palmetto
       - selection:
             route_id: '^69$'
             direction_id: '^1$'
-        path: YoRyan_Phil-Wash_Regional
+        path: YoRyan_Phil-Wash_LD
         consist: YoRyan_Palmetto_6car
 
         ##
@@ -76,6 +79,9 @@ gtfs:
       - selection:
             trip_short_name: '^138$'
         path: YoRyan_Wash-Phil_Regional_NoOdt
+      - selection:
+            trip_short_name: '^(86|174|84|176|94|66)$'
+        path: YoRyan_Wash-Phil_LD
 
         # Vermonter
       - selection:
@@ -88,14 +94,14 @@ gtfs:
       - selection:
             route_id: '^85$'
             direction_id: '^0$'
-        path: YoRyan_Wash-Phil_Regional
+        path: YoRyan_Wash-Phil_LD
         consist: YoRyan_Carolinian_7car
 
         # Palmetto
       - selection:
             route_id: '^69$'
             direction_id: '^0$'
-        path: YoRyan_Wash-Phil_Regional
+        path: YoRyan_Wash-Phil_LD
         consist: YoRyan_Palmetto_6car
 
 station_commands:
