@@ -24,7 +24,7 @@ gtfs:
             route_id: '^88$'
             direction_id: '^1$'
         path: YoRyan_Phil-Wash_Regional
-        consist: YoRyan_NERegional_7car
+        consist: YoRyan_AMTK_NERegional_7car_elec
       - selection:
             trip_short_name: '^133$'
         path: YoRyan_Phil-Wash_Regional_NoOdt
@@ -37,21 +37,21 @@ gtfs:
             route_id: '^90$'
             direction_id: '^1$'
         path: YoRyan_Phil-Wash_Regional
-        consist: YoRyan_Vermonter_6car
+        consist: YoRyan_AMTK_Vermonter_6car_elec
 
         # Carolinian
       - selection:
             route_id: '^85$'
             direction_id: '^1$'
         path: YoRyan_Phil-Wash_LD
-        consist: YoRyan_Carolinian_7car
+        consist: YoRyan_AMTK_Carolinian_7car_elec
 
         # Palmetto
       - selection:
             route_id: '^69$'
             direction_id: '^1$'
         path: YoRyan_Phil-Wash_LD
-        consist: YoRyan_Palmetto_6car
+        consist: YoRyan_AMTK_Palmetto_6car_elec
 
         # Silver Star
       - selection:
@@ -93,7 +93,7 @@ gtfs:
             route_id: '^88$'
             direction_id: '^0$'
         path: YoRyan_Wash-Phil_Regional
-        consist: YoRyan_NERegional_7car
+        consist: YoRyan_AMTK_NERegional_7car_elec
       - selection:
             trip_short_name: '^(184|134)$'
         path: YoRyan_Wash-Nwk-Phil_Regional
@@ -109,21 +109,21 @@ gtfs:
             route_id: '^90$'
             direction_id: '^0$'
         path: YoRyan_Wash-Phil_Regional
-        consist: YoRyan_Vermonter_6car
+        consist: YoRyan_AMTK_Vermonter_6car_elec
 
         # Carolinian
       - selection:
             route_id: '^85$'
             direction_id: '^0$'
         path: YoRyan_Wash-Phil_LD
-        consist: YoRyan_Carolinian_7car
+        consist: YoRyan_AMTK_Carolinian_7car_elec
 
         # Palmetto
       - selection:
             route_id: '^69$'
             direction_id: '^0$'
         path: YoRyan_Wash-Phil_LD
-        consist: YoRyan_Palmetto_6car
+        consist: YoRyan_AMTK_Palmetto_6car_elec
 
         # Silver Meteor
       - selection:
