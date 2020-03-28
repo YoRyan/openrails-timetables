@@ -5,7 +5,11 @@ This repository is where I develop passenger operations timetables for
 real-life schedules and are generated automatically by my
 [autotable](https://github.com/YoRyan/autotable) program.
 
-Before you rush for the big, enticing "Download ZIP" button, note that this repository *does not* contain any usable .timetable-or files. Instead, they are built by the GitHub Actions system and stored as artifacts. To download the timetables:
+Please read! Before you rush for the big, enticing "Download ZIP" button, note
+that this repository does *not* contain any usable .timetable-or files. Instead,
+they are built by the GitHub Actions system and stored as artifacts.
+
+To download the timetables:
 
 1. Unfortunately, for
    ["security reasons,"](https://github.community/t5/GitHub-Actions/Public-read-access-to-Actions-artifacts/td-p/43259)
