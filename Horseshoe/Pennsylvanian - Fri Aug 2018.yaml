@@ -5,6 +5,7 @@ gtfs:
     groups:
       - consist: YoRyan_AMTK_Pennsylvanian_6car
         note: $dec=2
+        start_time: 0
 
       - selection:
             trip_short_name: '^42$'
