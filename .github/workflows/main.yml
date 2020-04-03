@@ -30,7 +30,7 @@ jobs:
     - name: Install autotable
       uses: BSFishy/pip-action@v1
       with:
-        packages: git+https://github.com/YoRyan/autotable@32fe4fa3d674766763f8d9f7bf2f2a8460e1da4e
+        packages: git+https://github.com/YoRyan/autotable@v1.1
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
