@@ -1,0 +1,15 @@
+route: Horseshoe
+date: 2018-08-10
+gtfs:
+  - url: https://transitfeeds.com/p/amtrak/1136/20190523/download
+    groups:
+      - consist: YoRyan_AMTK_Pennsylvanian_6car
+        note: $dec=2
+
+      - selection:
+            trip_short_name: '^42$'
+        path: YoRyan_Jhns-Alta
+
+      - selection:
+            trip_short_name: '^43$'
+        path: YoRyan_Alta-Jhns
