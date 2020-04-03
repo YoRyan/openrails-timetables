@@ -54,7 +54,7 @@ gtfs:
             trip_headsign: '^Moorpark$'
         path: YoRyan_LA-Moor
       - selection:
-            trip_headsign: '^Ventura'
+            trip_headsign: '^East Ventura$'
         path: YoRyan_LA-Mon
 
         ##
