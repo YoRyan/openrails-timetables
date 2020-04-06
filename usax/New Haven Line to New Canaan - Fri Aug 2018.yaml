@@ -1,0 +1,44 @@
+route: usax
+date: 2018-08-10
+speed_unit: mph
+gtfs:
+  - url: https://transitfeeds.com/p/mta/87/20180806/download
+    groups:
+      - note: $acc=3 $dec=3
+        consist: YoRyan_MNCW_NH_6car
+        speed: $max=80
+
+        # Toward New York
+      - selection:
+            trip_short_name: '^(1707|1735)$'
+        path: YoRyan_Glen-Rye-GCT
+        start_time: -5:00
+      - selection:
+            trip_short_name: '^(1711|1723)$'
+        path: YoRyan_Glen-GCT
+        start_time: -5:00
+      - selection:
+            trip_short_name: '^1731$'
+        path: YoRyan_Glen-GCT
+        start_time: -56:00 # super-express to GCT
+      - selection:
+            trip_short_name: '^(1775|1777)$'
+        path: YoRyan_Glen-Rye-NewR-Ford-GCT
+        start_time: -5:00
+
+        # Toward New Canaan
+      - selection:
+            trip_short_name: '^1710$'
+        path: YoRyan_GCT-Ford-NewR-Stfd_NC
+      - selection:
+            trip_short_name: '^1712$'
+        path: YoRyan_GCT-Ford-Rye-Stfd_NC
+      - selection:
+            trip_short_name: '^(1740|1778)$'
+        path: YoRyan_GCT-Rye-Stfd_NC
+      - selection:
+            trip_short_name: '^1750$'
+        path: YoRyan_GCT-Hars-Stfd_NC
+      - selection:
+            trip_short_name: '^(1752|1758|1770|1774)$'
+        path: YoRyan_GCT-Stfd_NC
