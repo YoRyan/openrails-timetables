@@ -11,10 +11,10 @@ gtfs:
         consist: acela
       - selection:
             trip_short_name: '^(2190|2150|2154|2158|2160|2164|2166|2168|2170|2172)$'
-        path: YoRyan_Penn-NewH
+        path: YoRyan_Penn-NewH_Acela
       - selection:
             trip_short_name: '^(2151|2153|2159|2163|2165|2167|2171|2173|2175)$'
-        path: YoRyan_NewH-Penn
+        path: YoRyan_NewH-Penn_Acela
       - selection:
             trip_short_name: '^2155$'
         start_time: -50:00 # does not stop at New Haven
