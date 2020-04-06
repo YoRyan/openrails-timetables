@@ -1,0 +1,52 @@
+route: usax
+date: 2018-08-10
+gtfs:
+  - url: https://transitfeeds.com/p/amtrak/1136/20190523/download
+    groups:
+      - note: $dec=2
+
+        # Acela Express
+      - selection:
+            route_id: '^36919$'
+        consist: acela
+      - selection:
+            trip_short_name: '^(2190|2150|2154|2158|2160|2164|2166|2168|2170|2172)$'
+        path: YoRyan_Penn-NewH
+      - selection:
+            trip_short_name: '^(2151|2153|2159|2163|2165|2167|2171|2173|2175)$'
+        path: YoRyan_NewH-Penn
+      - selection:
+            trip_short_name: '^2155$'
+        start_time: -50:00 # does not stop at New Haven
+
+        # Northeast Regional
+      - selection:
+            route_id: '^88$'
+        consist: YoRyan_AMTK_NERegional_7car_elec
+      - selection:
+            trip_short_name: '^(66|190|86|94)$'
+        path: YoRyan_Penn-NewH
+      - selection:
+            trip_short_name: '^(170|172|174|176|136|178|148)$'
+        path: YoRyan_Penn-NewR-Brdg-NewH
+      - selection:
+            trip_short_name: '^(67|95|175)$'
+        path: YoRyan_NewH-Penn
+      - selection:
+            trip_short_name: '^(141|171|83|173|137|177|179)$'
+        path: YoRyan_NewH-Brdg-Penn
+
+        # Vermonter
+      - selection:
+            route_id: '^90$'
+            direction_id: '^0$'
+        path: YoRyan_Penn-Brdg-NewH
+        consist: YoRyan_AMTK_Vermonter_6car_elec
+      - selection:
+            route_id: '^90$'
+            direction_id: '^1$'
+        path: YoRyan_NewH-Brdg-Penn
+        consist: YoRyan_AMTK_Vermonter_6car_elec
+
+    station_map:
+        NYP: Penn Station

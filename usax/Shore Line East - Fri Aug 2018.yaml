@@ -1,0 +1,26 @@
+route: usax
+date: 2018-08-10
+gtfs:
+  - url: http://transitfeeds.com/p/connecticut-transit/317/20180804/download
+    groups:
+      - note: $dec=2
+
+        # Toward Stamford
+      - selection:
+            trip_id: '^(1633|1637)$'
+        path: YoRyan_NewH-Stfd
+        consist: YoRyan_CNDX_SLEast_3car
+
+        # Toward New London
+      - selection:
+            trip_id: '^1610$'
+        path: YoRyan_Stfd-SoNo-NewH
+        consist: YoRyan_CNDX_SLEast_3car $reverse
+      - selection:
+            trip_id: '^(1640|1644)$'
+        path: YoRyan_Stfd-NewH
+        consist: YoRyan_CNDX_SLEast_3car $reverse
+
+    station_map:
+        ST: # New Haven/State St
+        WH: # West Haven
