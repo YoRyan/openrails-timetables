@@ -1,7 +1,7 @@
 route: usax
 date: 2018-08-10
 gtfs:
-  - url: http://transitfeeds.com/p/connecticut-transit/317/20180804/download
+  - url: https://transitfeeds.com/p/connecticut-transit/317/20180804/download
     groups:
       - note: $dec=2
 
