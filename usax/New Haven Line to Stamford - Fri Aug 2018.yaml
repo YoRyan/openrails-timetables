@@ -1,0 +1,72 @@
+route: usax
+date: 2018-08-10
+speed_unit: mph
+gtfs:
+  - url: https://transitfeeds.com/p/mta/87/20180806/download
+    groups:
+      - note: $acc=3 $dec=3
+        consist: YoRyan_MNCW_NH_8car
+        speed: $max=80
+
+        # Toward New York
+      - selection:
+            trip_short_name: '^(1301|1303|1305|1307|1309|1321|1335|1349|1351|1353|1355|1357|1359|1361|1363|1365|1367|1369|1373|1375|1477|1379|1381|1383|1385|1387|1391|1393|1395|1397|1299|1399)$'
+        path: YoRyan_Stfd-GCT
+      - selection:
+            trip_short_name: '^(1407|1331)$'
+        path: YoRyan_Stfd-XGwch-Lmnt-X125-GCT
+      - selection:
+            trip_short_name: '^1473$'
+        path: YoRyan_Stfd-XGwch-Rye-XNewR-GCT
+      - selection:
+            trip_short_name: '^(1311|1333)$'
+        path: YoRyan_Stfd-Rye-X125-GCT
+      - selection:
+            trip_short_name: '^1325$'
+        path: YoRyan_Gwch-Rye-X125-GCT
+      - selection:
+            trip_short_name: '^1347$'
+        path: YoRyan_Stfd-Rye-XFord-GCT
+      - selection:
+            trip_short_name: '^1315$'
+        path: YoRyan_Stfd-XGwch-Lmnt-XFord-GCT
+      - selection:
+            trip_short_name: '^1339$'
+        path: YoRyan_Stfd-Lmnt-X125-GCT
+      - selection:
+            trip_short_name: '^1341$'
+        path: YoRyan_Stfd-Lmnt-XFord-GCT
+
+        # Toward Stamford
+      - selection:
+            trip_short_name: '^(1404|1312|1314|1316|1318|1320|1322|1324|1326|1328|1330|1332|1334|1336|1338|1340|1346|1360|1374|1382|1384|1386|1388|1390|1392|1394|1396|1398|1300|1302|1304)$'
+        path: YoRyan_GCT-Stfd
+      - selection:
+            trip_short_name: '^(1306|1308|1310|1342|1378)$'
+        path: YoRyan_GCT-Gwch-XStfd
+      - selection:
+            trip_short_name: '^(1406|1410)$'
+        path: YoRyan_GCT-NewR-XRye-Stfd
+      - selection:
+            trip_short_name: '^1308$'
+        path: YoRyan_GCT-NewR-XRye-Stfd
+      - selection:
+            trip_short_name: '^1408$'
+        path: YoRyan_GCT-NewR-XRye-Gwch-XStfd
+      - selection:
+            trip_short_name: '^(1352|1370)$'
+        path: YoRyan_GCT-125-XNewR-Stfd
+      - selection:
+            trip_short_name: '^1362$'
+        path: YoRyan_GCT-125-XNewR-Gwch
+        station_map:
+            120: # Riverside (deadlocks)
+      - selection:
+            trip_short_name: '^(1358|1368|1376)$'
+        path: YoRyan_GCT-XRye-Stfd
+
+station_commands:
+    "": $stoptime=30
+    Grand Central Terminal: $stoptime=120
+    New Rochelle: $stoptime=60
+    Stamford: $stoptime=120

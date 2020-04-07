@@ -1,0 +1,48 @@
+route: usax
+date: 2018-08-10
+speed_unit: mph
+gtfs:
+  - url: https://transitfeeds.com/p/mta/87/20180806/download
+    groups:
+      - note: $acc=3 $dec=3
+        consist: YoRyan_MNCW_NH_8car
+        speed: $max=80
+
+        # Toward New York
+      - selection:
+            trip_short_name: '^(1237|1239|1241|1247|1275|1279)$'
+        path: YoRyan_Hrsn-GCT
+      - selection:
+            trip_short_name: '^(1313|1221|1327|1231)$'
+        path: YoRyan_Hrsn-Lmnt-X125-GCT
+      - selection:
+            trip_short_name: '^(1211|1225|1229)$'
+        path: YoRyan_NewR-MntV-X125-GCT
+      - selection:
+            trip_short_name: '^1233$'
+        path: YoRyan_Hrsn-MntV-X125-GCT
+
+        # Toward Harrison
+      - selection:
+            trip_short_name: '^1248$'
+        path: YoRyan_GCT-Hrsn
+      - selection:
+            trip_short_name: '^(1244|1270)$'
+        path: YoRyan_GCT-125-XMntV-Hrsn
+      - selection:
+            trip_short_name: '^(1254|1260|1264|1274|1278)$'
+        path: YoRyan_GCT-125-XNewR-Hrsn
+      - selection:
+            trip_short_name: '^(1256|1268)$'
+        path: YoRyan_GCT-125-XMntV-NewR
+
+        # Skip stops that cause deadlocks.
+      - selection:
+            direction_id: '^0$'
+        station_map:
+            111: # Mamaroneck
+
+station_commands:
+    "": $stoptime=30
+    Grand Central Terminal: $stoptime=120
+    New Rochelle: $stoptime=60
