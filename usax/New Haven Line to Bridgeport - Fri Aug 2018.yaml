@@ -27,7 +27,7 @@ gtfs:
         consist: YoRyan_MNCW_NH_Water_3car
       - selection:
             trip_short_name: '^1445$'
-        path: YoRyan_Brdg-Stfd-XGwch-X125-GCT.pat
+        path: YoRyan_Brdg-Stfd-XGwch-X125-GCT
       - selection:
             trip_short_name: '^1427$'
         path: YoRyan_Brdg-EtNo-X125-GCT
