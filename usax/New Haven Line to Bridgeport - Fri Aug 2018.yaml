@@ -1,0 +1,55 @@
+route: usax
+date: 2018-08-10
+speed_unit: mph
+gtfs:
+  - url: https://transitfeeds.com/p/mta/87/20180806/download
+    groups:
+      - note: $acc=3 $dec=3
+        consist: YoRyan_MNCW_NH_8car
+        speed: $max=80
+
+        # Toward New York
+      - selection:
+            trip_short_name: '^(1417|1437)$'
+        path: YoRyan_SoNo-Stfd-XGwch-X125-GCT
+      - selection:
+            trip_short_name: '^(1429|1431|1841)$'
+        path: YoRyan_SoNo-Stfd-X125-GCT
+      - selection:
+            trip_short_name: '^1409$'
+        path: YoRyan_Brdg-Stfd-X125-GCT
+      - selection:
+            trip_short_name: '^1419$'
+        path: YoRyan_Brdg-SoNo-X125-GCT
+      - selection:
+            trip_short_name: '^1923$'
+        path: YoRyan_Brdg-XStfd
+        consist: YoRyan_MNCW_NH_Water_3car
+      - selection:
+            trip_short_name: '^1445$'
+        path: YoRyan_Brdg-Stfd-XGwch-X125-GCT.pat
+      - selection:
+            trip_short_name: '^1427$'
+        path: YoRyan_Brdg-EtNo-X125-GCT
+      - selection:
+            trip_short_name: '^1433$'
+        path: YoRyan_FldM-SoNo-XStfd-X125-GCT
+
+        # Toward Bridgeport
+      - selection:
+            trip_short_name: '^(1442|1458|1464)$'
+        path: YoRyan_GCT-125-XStfd-SoNo
+      - selection:
+            trip_short_name: '^1472$'
+        path: YoRyan_GCT-125-XGwch-XStfd-SoNo
+      - selection:
+            trip_short_name: '^(1456|1470)$'
+        path: YoRyan_GCT-125-XStfd-XSoNo-Brdg
+
+station_commands:
+    "": $stoptime=30
+    Grand Central Terminal: $stoptime=120
+    Harlem 125th Street: $stoptime=60
+    Stamford: $stoptime=120
+    South Norwalk: $stoptime=60
+    Bridgeport: $stoptime=60
