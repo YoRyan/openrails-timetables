@@ -42,3 +42,10 @@ gtfs:
       - selection:
             trip_short_name: '^(1752|1758|1770|1774)$'
         path: YoRyan_GCT-Stfd_NC
+
+station_commands:
+    "": $stoptime=30
+    Grand Central Terminal: $stoptime=120
+    Harlem 125th Street: $stoptime=60
+    New Rochelle: $stoptime=60
+    Stamford: $stoptime=120
