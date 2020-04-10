@@ -1,0 +1,40 @@
+route: usax
+date: 2018-08-10
+speed_unit: mph
+gtfs:
+  - url: https://transitfeeds.com/p/mta/87/20180806/download
+    groups:
+      - note: $dec=2
+        speed: $max=80
+
+        # Toward New York
+      - selection:
+            direction_id: '^1$'
+        consist: YoRyan_MNCW_NH_8car_dual $reverse
+      - selection:
+            trip_short_name: '^(1811|1841)$'
+        path: YoRyan_SoNo-Stfd-X125-GCT_Dan
+      - selection:
+            trip_short_name: '^(1819|1831)$'
+        path: YoRyan_SoNo-XStfd-X125-GCT_Dan
+
+        # Toward Danbury
+      - selection:
+            direction_id: '^0$'
+        consist: YoRyan_MNCW_NH_8car_dual
+      - selection:
+            trip_short_name: '^(1848|1868)$'
+        path: YoRyan_GCT-125-XStfd-SoNo_Dan
+      - selection:
+            trip_short_name: '^1860$'
+        path: YoRyan_GCT-125-XStfd-XSoNo_Dan
+      - selection:
+            trip_short_name: '^1882$'
+        path: YoRyan_GCT-125-XGwch-XStfd-SoNo_Dan
+
+station_commands:
+    "": $stoptime=30
+    Grand Central Terminal: $stoptime=120
+    Harlem 125th Street: $stoptime=60
+    Stamford: $stoptime=120
+    South Norwalk: $stoptime=60
