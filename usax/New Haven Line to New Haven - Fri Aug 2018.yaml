@@ -1,0 +1,91 @@
+route: usax
+date: 2018-08-10
+speed_unit: mph
+gtfs:
+  - url: https://transitfeeds.com/p/mta/87/20180806/download
+    groups:
+      - note: $acc=3 $dec=3
+        consist: YoRyan_MNCW_NH_8car
+        speed: $max=80
+
+        # Toward New York
+      - selection:
+            trip_short_name: '^(1503|1507|1509|1549|1551|1553|1555|1557|1559|1561|1563|1565|1567|1571|1573|1587|1595|1597|1497|1599)$'
+        path: YoRyan_NewH-Stfd-X125-GCT
+      - selection:
+            trip_short_name: '^1511$'
+        path: YoRyan_NewH-EtNo-XStfd-X125-GCT
+      - selection:
+            trip_short_name: '^(1513|1541)$'
+        path: YoRyan_NewH-SoNo-XStfd-X125-GCT
+      - selection:
+            trip_short_name: '^(1517|1539)$'
+        path: YoRyan_NewH-Ffld-XStfd-X125-GCT
+      - selection:
+            trip_short_name: '^(1523|1533)$'
+        path: YoRyan_NewH-Brdg-XStfd-X125-GCT
+      - selection:
+            trip_short_name: '^(1525|1531)$'
+        path: YoRyan_NewH-SoNo-XStfd-Gwch-X125-GCT
+      - selection:
+            trip_short_name: '^1529$'
+        path: YoRyan_NewH-Ffld-X125-GCT
+      - selection:
+            trip_short_name: '^1535$'
+        path: YoRyan_NewH-Rye-XNewR-X125-GCT
+      - selection:
+            trip_short_name: '^(1537|1569|1575|1577|1581)$'
+        path: YoRyan_NewH-Stfd-XGwch-X125-GCT
+      - selection:
+            trip_short_name: '^1545$'
+        path: YoRyan_NewH-Ffld-XSoNo-XStfd-X125-GCT
+      - selection:
+            trip_short_name: '^1579$'
+        path: YoRyan_NewH-Stfd-XGwch-Rye-XFord-GCT
+      - selection:
+            trip_short_name: '^3581$'
+        path: YoRyan_NewH-WstH-XBrdg-XStfd-X125-GCT
+      - selection:
+            trip_short_name: '^(1583|1591)$'
+        path: YoRyan_NewH-Stfd-XFord-GCT
+
+        # Toward New Haven
+      - selection:
+            trip_short_name: '^(1504|1506|1508)$'
+        path: YoRyan_GCT-Ford-XGwch-XStfd-NewH
+      - selection:
+            trip_short_name: '^(1510|1514|1540|1546)$'
+        path: YoRyan_GCT-XGwch-XStfd-NewH
+      - selection:
+            trip_short_name: '^(1512|1516|1416|1518|1520|1522|1524|1526|1528|1530|1532|1534|1536|1538|1574|1576|1578|1584|1586|1588|1590|1592|1594|1598|1500|1502)$'
+        path: YoRyan_GCT-XStfd-NewH
+      - selection:
+            trip_short_name: '^(1542|1562|1582)$'
+        path: YoRyan_GCT-XStfd-XSoNo-NewH
+      - selection:
+            trip_short_name: '^1544$'
+        path: YoRyan_GCT-Ford-XNewR-XRye-NewH
+      - selection:
+            trip_short_name: '^(1548|1556)$'
+        path: YoRyan_GCT-XStfd-XBrdg-NewH
+      - selection:
+            trip_short_name: '^(1552|1568)$'
+        path: YoRyan_GCT-XStfd-XFfld-NewH
+      - selection:
+            trip_short_name: '^1554$'
+        path: YoRyan_GCT-Ford-XGwch-XStfd-XSoNo-NewH
+      - selection:
+            trip_short_name: '^1560$'
+        path: YoRyan_GCT-XFfld-NewH
+      - selection:
+            trip_short_name: '^(1570|1572)$'
+        path: YoRyan_GCT-XSoNo-NewH
+
+station_commands:
+    "": $stoptime=30
+    Grand Central Terminal: $stoptime=120
+    Harlem 125th Street: $stoptime=60
+    Stamford: $stoptime=120
+    South Norwalk: $stoptime=60
+    Bridgeport: $stoptime=60
+    New Haven: $stoptime=120
