@@ -24,3 +24,6 @@ gtfs:
     station_map:
         ST: # New Haven/State St
         WH: # West Haven
+
+station_commands:
+    "": $stoptime=45

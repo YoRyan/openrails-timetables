@@ -50,3 +50,8 @@ gtfs:
 
     station_map:
         NYP: Penn Station
+
+station_commands:
+    "": $stoptime=60
+    Penn Station: $stoptime=120
+    New Haven: $stoptime=120
