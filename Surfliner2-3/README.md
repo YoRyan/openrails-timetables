@@ -12,6 +12,10 @@ which Amtrak GTFS data is available:
 
 Based on the version 2.3 upgrade of the route by Brian Smolke.
 
+#### Timetables
+
+* [All LOSSAN (Amtrak/Metrolink/Coaster)](https://web.archive.org/web/20180701055016/https://www.metrolinktrains.com/globalassets/schedules/lossan-timetable.pdf)
+
 #### Errata
 
 * You **must** use a testing build of Open Rails. The Amtrak timetable errors out

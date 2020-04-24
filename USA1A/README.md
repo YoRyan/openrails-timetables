@@ -13,6 +13,13 @@ for which Amtrak GTFS data is available:
 
 Based on v4 of Vince Cockeram's Northeast Corridor upgrade.
 
+#### Timetables
+
+* [Amtrak](https://web.archive.org/web/20180922164720/https://www.amtrak.com/content/dam/projects/dotcom/english/public/documents/timetables/Amtrak-System-Timetable-060118.pdf)
+* [SEPTA](https://web.archive.org/web/20180311012547/https://www.septa.org/schedules/future/rail/pdf/nwk.pdf)
+* [MARC Penn Line](https://web.archive.org/web/20180412202500/https://mta.maryland.gov/sites/default/files/Penn_Weekday_Apr23_Grid.pdf)
+* [MARC Camden Line](https://web.archive.org/web/20181001225619/https://mta.maryland.gov/sites/default/files/Camden_Mar13_small.pdf)
+
 #### Errata
 
 * MARC trains use push-pull operation. For these trains, you **must** use a

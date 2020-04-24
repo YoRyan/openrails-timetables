@@ -15,6 +15,11 @@ As well as isolated stretches of the following services:
 
 Based on the version 4.2 upgrade of the route by Charlie Sibaja.
 
+#### Timetables
+
+* [Amtrak](https://web.archive.org/web/20180922164720/https://www.amtrak.com/content/dam/projects/dotcom/english/public/documents/timetables/Amtrak-System-Timetable-060118.pdf)
+* [Metrolink](https://web.archive.org/web/20200424211524/https://metrolinktrains.com/globalassets/schedules/december2017_schedulechange.pdf)
+
 #### Errata
 
 * Surfliner and Metrolink trains use push-pull operation. For these trains, you
