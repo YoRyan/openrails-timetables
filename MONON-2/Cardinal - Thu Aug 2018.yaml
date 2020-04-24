@@ -1,0 +1,17 @@
+route: MONON-2
+date: 2018-08-09
+gtfs:
+  - url: https://transitfeeds.com/p/amtrak/1136/20190523/download
+    groups:
+      - consist: YoRyan_AMTK_Cardinal_7car
+
+      - selection:
+            trip_short_name: '^51$'
+        path: Indianapolis to Chicago (Amtrak)
+      - selection:
+            trip_short_name: '^50$'
+        path: Chicago to Indianapolis (Amtrak)
+
+    station_map:
+        CHI: Union-PRR AI
+        IND: Indianapolis Union Station
