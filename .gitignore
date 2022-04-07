@@ -1,6 +1,9 @@
 *.timetable_or
 *.timetable-or
 
+# Dev container workflow
+.out
+
 # GitHub workflow
 .build
 .artifacts

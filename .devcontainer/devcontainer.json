@@ -1,0 +1,15 @@
+{
+    "image": "yoryan/autotable",
+    "remoteUser": "autotable",
+    "features": {
+        "common": {
+            "username": "autotable",
+            "uid": "automatic",
+            "gid": "automatic",
+            "installZsh": true,
+            "installOhMyZsh": true,
+            "upgradePackages": true,
+            "nonFreePackages": false
+        }
+    }
+}
