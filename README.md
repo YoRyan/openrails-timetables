@@ -5,22 +5,7 @@ This repository is where I develop passenger operations timetables for
 real-life schedules and are generated automatically by my
 [autotable](https://github.com/YoRyan/autotable) program.
 
-Please read! Before you rush for the big, enticing "Download ZIP" button, note
-that this repository does *not* contain any usable .timetable-or files. Instead,
-they are built by the GitHub Actions system and stored as artifacts.
-
-To download the timetables:
-
-1. Unfortunately, for
-   ["security reasons,"](https://github.community/t5/GitHub-Actions/Public-read-access-to-Actions-artifacts/td-p/43259)
-   you will have to sign in to GitHub. (Any account works.)
-2. Follow
-   [this link](https://github.com/YoRyan/openrails-timetables/actions?query=is%3Asuccess+workflow%3A%22Build+timetables%22)
-   for the Actions page.
-3. Select the latest available commit.
-   ![Screenshot 1](https://github.com/YoRyan/openrails-timetables/wiki/Download_1.jpg)
-4. Download the "All timetables" artifact.
-   ![Screenshot 2](https://github.com/YoRyan/openrails-timetables/wiki/Download_2.jpg)
+Download my timetables [here](https://youngryan.com/downloads/open-rails/YoRyan-Timetables_2020-04-24.zip)!
 
 To install a timetable:
 
