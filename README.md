@@ -5,7 +5,7 @@ This repository is where I develop passenger operations timetables for
 real-life schedules and are generated automatically by my
 [autotable](https://github.com/YoRyan/autotable) program.
 
-Download my timetables [here](https://youngryan.com/downloads/open-rails/YoRyan-Timetables_2020-04-24.zip)!
+Download my timetables [here](https://drive.google.com/file/d/1Yc07jVAH93i-HWjSj0Chu6hP62fHnlBN/view?usp=sharing)!
 
 To install a timetable:
 
